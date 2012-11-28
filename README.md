@@ -1,4 +1,17 @@
 many-to-many
 ============
 
-A simple Rails 3.2 CRUD application that demonstrates how to use checkboxes to persist many-to-many relationships.
+A simple Rails 3.2 CRUD application that demonstrates how to use checkboxes on a form to persist many-to-many relationships.
+
+The original idea of how to implement this technique came from here:
+http://millarian.com/programming/ruby-on-rails/quick-tip-has_many-through-checkboxes/
+
+Because I had to see it work for myself, I created this quick demo app.
+
+setup
+=====
+1.  Clone the app locally.
+2.  Run rake db:migrate to set up the database.
+3.  Run rake db:populate to seed the database with some sample data.
+4.  Edit an existing User or Add a User.
+5.  After saving, observe the "Groups" column on the index page will display a comma-separated list of the Groups that were selected.
