@@ -12,6 +12,7 @@ class UsersController < ApplicationController
     @user = User.find_by_id(params[:id])
     @user.attributes = {'group_ids' => []}.merge(params[:user] || {})
 
+    # Observe that we're calling save instead of update_attributes.
     if @user.save
       flash[:notice] = "User #{ @user.first_name } #{ @user.last_name} has been saved successfully."
       redirect_to(users_path)
